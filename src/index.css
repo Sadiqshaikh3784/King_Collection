@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+#logo{
+    
+    color: pink;
+}
+#navbarlist{
+    display: flex;
+    gap: 2px;
+}
+#navright{
+    display: flex;
+    
+}
