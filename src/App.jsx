@@ -5,6 +5,7 @@ import {Home} from "./Pages/Home";
 import {Shop} from "./Pages/Shop";
 import {About} from "./Pages/About";
 import {Product} from "./Pages/Product";
+import{Contact} from "./Pages/Contact";
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/Shop' element={<Shop />} />
-       <Route path='/About' element={<About />} />
-        <Route path='/Product' element={<Product />} />
+       <Route path='/Collection' element={<Product />} />
+        <Route path='/About' element={<About/>} />
+        <Route path='/Contact' element={<Contact/>} />
 
     </Routes>
   
