@@ -6,31 +6,32 @@ import { LuUserRound } from "react-icons/lu";
 export const Navbar = () => {
   return (
     <>
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-8 py-6 border-b border-gray-200">
+      <nav className="absolute top-0 left-0 w-full z-50">
+  <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-6 text-white">
         <h1 className="text-4xl font-bold font-serif cursor-pointer">
           King
-          <span className="text-yellow-600 ">
+          <span className="text-yellow-500 ">
             _Collection
           </span>
         </h1>
         {/* navigation */}
         <div className="flex items-center gap-10">
-          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300" to="/" to='/' >Home</Link>
-          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300" to="/" to='/Shop'>Shop</Link>
-          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300" to="/" to='/Collection'>Collections</Link>
-          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300" to="/" to='/About' > About </Link>
-          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300" to="/" to='/Contact' >Contact</Link>
+          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300  hidden md:flex gap-10" to="/" to='/' >Home</Link>
+          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300  hidden md:flex gap-10" to="/" to='/Shop'>Shop</Link>
+          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300  hidden md:flex gap-10" to="/" to='/Collection'>Collections</Link>
+          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300  hidden md:flex gap-10" to="/" to='/About' > About </Link>
+          <Link className="text-sm uppercase tracking-widest hover:text-yellow-600 transition duration-300  hidden md:flex gap-10" to="/" to='/Contact' >Contact</Link>
         </div>
 
 
         {/* Right Side */}
-        <div className="flex items-center gap-6 text-2xl ">
+        <div className="flex items-center gap-3 md:gap-5 text-2xl ">
           <IoSearchOutline className="cursor-pointer hover:text-yellow-600 transition duration-300 hover:scale-110" />
           <FiHeart className="cursor-pointer hover:text-yellow-600 transition duration-300 hover:scale-110" />
           <HiOutlineShoppingBag className="cursor-pointer hover:text-yellow-600 transition duration-300 hover:scale-110" />
           <LuUserRound className="cursor-pointer hover:text-yellow-600 transition duration-300 hover:scale-110" />
         </div>
-
+</div>
       </nav>
 
     </>
