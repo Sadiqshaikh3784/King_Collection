@@ -4,7 +4,7 @@ import { Navbar } from './Components/Navbar';
 import {Home} from "./Pages/Home";
 import {Shop} from "./Pages/Shop";
 import {About} from "./Pages/About";
-import {Product} from "./Pages/Product";
+import Product from "./Pages/Product";
 import{Contact} from "./Pages/Contact";
 
 
