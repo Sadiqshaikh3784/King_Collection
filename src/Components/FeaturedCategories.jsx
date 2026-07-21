@@ -16,6 +16,7 @@ const FeaturedCategories = () => {
             key={category.id}
             title={category.title}
             image={category.image}
+             slug={category.slug}
           />
         ))}
 

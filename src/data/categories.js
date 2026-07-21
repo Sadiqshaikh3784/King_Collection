@@ -1,9 +1,9 @@
 import tshirtsCategoryImage from "../assets/Images/categories/tshirts/cover.jpg";
 import shirtsCategoryImage from "../assets/Images/categories/shirts/cover.jpg";
 import baggyJeansCategoryImage from "../assets/Images/categories/pents/cover.jpg";
-/*import cargoPantsCategoryImage from "../assets/Images/categories/cargo";
-import hoodiesCategoryImage from "../assets/Images/categories/hoodies";
-import accessoriesCategoryImage from "../assets/Images/categories/accessories";*/
+import cargoPantsCategoryImage from "../assets/Images/categories/cargo/cover.jpg";
+import hoodiesCategoryImage from "../assets/Images/categories/hoodies/cover.jpg";
+import accessoriesCategoryImage from "../assets/Images/categories/accessories/cover.jpg";
 
 
 const categories = [
@@ -25,7 +25,7 @@ const categories = [
     image: baggyJeansCategoryImage,
     slug: "baggy-jeans",
   },
- /* {
+ {
     id: 4,
     title: "Cargo Pants",
     image: cargoPantsCategoryImage,
@@ -42,7 +42,7 @@ const categories = [
     title: "Accessories",
     image: accessoriesCategoryImage,
     slug: "accessories",
-  },*/
+  },
 ];
 
 export default categories;

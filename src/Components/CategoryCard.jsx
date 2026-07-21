@@ -1,4 +1,6 @@
-const CategoryCard = ({ title, image }) => {
+
+import { Link } from "react-router-dom";
+const CategoryCard = ({ title, image, slug }) => {
   return (
     <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-lg">
 
@@ -19,27 +21,27 @@ const CategoryCard = ({ title, image }) => {
           {title}
         </h2>
 
-        <button
-          className="
-            opacity-0
-            translate-y-6
-            group-hover:opacity-100
-            group-hover:translate-y-0
-            transition-all
-            duration-500
-            bg-white
-            text-black
-            px-6
-            py-2
-            rounded-full
-            font-semibold
-            hover:bg-yellow-500
-            hover:text-white
-          "
-        >
-          Shop Now →
-        </button>
-
+       <Link
+  to={`/shop/${slug}`}
+  className="
+    opacity-0
+    translate-y-6
+    group-hover:opacity-100
+    group-hover:translate-y-0
+    transition-all
+    duration-500
+    bg-white
+    text-black
+    px-6
+    py-2
+    rounded-full
+    font-semibold
+    hover:bg-yellow-500
+    hover:text-white
+  "
+>
+  Shop Now →
+</Link>
       </div>
 
     </div>
