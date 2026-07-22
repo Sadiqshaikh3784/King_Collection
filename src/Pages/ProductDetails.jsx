@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom";
 import products from "../Pages/Products";
 import { FaStar } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const product = products.find((item) => item.id === Number(id));
 
@@ -20,15 +23,34 @@ const ProductDetails = () => {
     );
 
     return (
-        <section className="bg-gray-100 min-h-screen py-14">
+     <section className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-6">
 
-            <div className="max-w-7xl mx-auto px-6">
 
-                <div className="bg-white rounded-[32px] shadow-2xl border border-gray-200 overflow-hidden">
+           <div className="w-full max-w-4xl px-4">
 
-                    <div className="grid lg:grid-cols-2 gap-12 p-10">
+               <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden max-h-[85vh] overflow-y-auto">
+                <button
+  onClick={() => navigate(-1)}
+  className="
+    absolute
+    top-5
+    right-5
+    w-10
+    h-10
+    rounded-full
+    bg-gray-100
+    hover:bg-black
+    hover:text-white
+    transition
+    flex
+    items-center
+    justify-center
+  "
+>
+  <FaTimes />
+</button>
 
-                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                  <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8">
 
                             {/* Left Side */}
                             <div className="relative">
@@ -41,12 +63,19 @@ const ProductDetails = () => {
                                 </div>
 
                                 {/* Product Image */}
-                              <div className="bg-white border rounded-3xl shadow-xl p-6">
-
+                              <div className="bg-gray-50 rounded-3xl border border-gray-200 shadow-lg p-8">
                                     <img
                                         src={product.image}
                                         alt={product.name}
-                                        className=" w-full h-[700px] object-contain p-5 transition-transform duration-500 hover:scale-105 "
+                                        className="
+w-full
+h-[360px]
+object-contain
+p-6
+transition
+duration-500
+hover:scale-105 
+"
                                     />
 
                                 </div>
@@ -102,7 +131,7 @@ const ProductDetails = () => {
                                         Description
                                     </h3>
 
-                                    <p className="text-gray-600 leading-8">
+                                    <p className="text-gray-600 leading-6">
                                         Premium quality oversized streetwear designed for modern fashion.
                                         Made with soft cotton fabric, comfortable fit, and perfect for
                                         casual wear, daily styling, and trendy outfits.
@@ -115,7 +144,7 @@ const ProductDetails = () => {
 
                     </div>
                 </div>
-            </div>
+    
 
         </section>
     );
